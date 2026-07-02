@@ -845,9 +845,9 @@ local Library do
         self.ThemeMap[Item] = ThemeData
     end
 
-	Library.ToRich = function(self, Text, Color)
-		return `<font color="rgb({MathFloor(Color.R * 255)}, {MathFloor(Color.G * 255)}, {MathFloor(Color.B * 255)})">{Text}</font>`
-	end
+        Library.ToRich = function(self, Text, Color)
+                return `<font color="rgb({MathFloor(Color.R * 255)}, {MathFloor(Color.G * 255)}, {MathFloor(Color.B * 255)})">{Text}</font>`
+        end
 
     Library.GetConfig = function(self)
         local Config = { } 
@@ -4702,13 +4702,6 @@ local Library do
         end
     end
 end
-
-    -- ===== Lucide Icon Finder =====
-    task.spawn(function()
-        pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Orvez83/IconFinder/refs/heads/main/IconFinder.lua"))()
-        end)
-    end)
 
 getgenv().Library = Library
 return Library
